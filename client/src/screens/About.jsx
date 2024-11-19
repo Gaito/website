@@ -22,11 +22,11 @@ export function About() {
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1rem' }}>
             <Image
               src={Me}
-              alt="Your Name"
               width={150}
               height={150}
               radius="50%"
               style={{ flexShrink: 0 }}
+              visibleFrom='sm'
             />
             <Text style={{ flex: 1, textAlign: 'justify' }}>
               Hello, my name is Taylor Gaito. I am a 2024 graduate from Johns Hopkins with two Bachelor's in Cognitive Science and Computer Science. 
@@ -55,6 +55,7 @@ export function About() {
               style={{ flexShrink: 0 }}
               onMouseEnter={() => setRightHoverImage(GuitarMusic)}
               onMouseLeave={() => setRightHoverImage(Guitar)}
+              visibleFrom='sm'
             />
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1rem' }}>
@@ -65,6 +66,7 @@ export function About() {
               style={{ flexShrink: 0 }}
               onMouseEnter={() => setLeftHoverImage(BrainColor)}
               onMouseLeave={() => setLeftHoverImage(Brain)}
+              visibleFrom='sm'
             />
             <Text style={{ flex: 1, textAlign: 'justify' }}>
                My favorite books include Portrait of the Artists as a 
@@ -73,7 +75,11 @@ export function About() {
               these under the writings tab on this page. Also, if you want to see my resume and past projects that's under the projects tab.
             </Text>
           </div>
-          
+          <Group hiddenFrom='sm'>
+            <Image height={100} src={Brain}></Image>
+            <Image height={100} src={Me}></Image>
+            <Image height={100} src={Guitar}></Image>
+          </Group>
         </div>
         <Footer />
       </Container>

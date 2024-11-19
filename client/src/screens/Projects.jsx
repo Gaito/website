@@ -162,6 +162,7 @@ export function Projects() {
             height={125}
             onMouseEnter={() => setHoverProjImage(LaptopCode)}
             onMouseLeave={() => setHoverProjImage(Laptop)}
+            visibleFrom='sm'
           />
         </Flex>
 
@@ -216,7 +217,6 @@ export function Projects() {
             </Card>
           ))}
         </Flex>
-
         <Footer />
       </Container>
     </ScrollArea>

@@ -48,42 +48,62 @@ export function Header() {
 
   return (
     <header className={classes.header}>
-        <Container size="md" className={classes.inner}>
+      <Container size="md" className={classes.inner}>
         <Flex justify="space-between" align="center" style={{ width: '100%' }}>
-            {/* Left side: Logo + Star */}
-            <Flex align="center" gap="sm">
+          {/* Left side: Logo + Star */}
+          <Flex align="center" gap="sm">
             <div
-                style={{
+              style={{
                 display: 'inline-block',
                 transition: 'filter 0.3s ease',
                 cursor: 'pointer',
-                }}
-                onMouseEnter={() => setHoverImage(ColorSignature)}
-                onMouseLeave={() => setHoverImage(Signature)}
-                onClick={() => navigate('/')}
+              }}
+              onMouseEnter={() => setHoverImage(ColorSignature)}
+              onMouseLeave={() => setHoverImage(Signature)}
+              onClick={() => navigate('/')}
             >
-                <Image
+              <Image
                 src={hoverImage}
                 width={150}
                 height={50}
-                style={{
-                    transition: 'opacity 0.3s ease',
-                    cursor: 'pointer',
-                }}
-                />
+                sx={(theme) => ({
+                  cursor: 'pointer',
+                  [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+                    width: 120, // Smaller size on mobile
+                  },
+                })}
+              />
             </div>
-            <Image src={Star} width={20} height={20} />
-            </Flex>
-    
-            {/* Right side: Desktop Links */}
-            <Group style={{ display: 'flex', justifyContent: 'flex-end', flexGrow: 1 }}>
+            <Image
+              src={Star}
+              width={20}
+              height={20}
+            />
+          </Flex>
+
+          {/* Right side: Desktop Links */}
+          <Group
+            visibleFrom="xs" // Hides the links on small screens
+            style={{ display: 'flex', justifyContent: 'flex-end', flexGrow: 1 }}
+          >
             {items}
-            </Group>
-    
-            {/* Burger Menu */}
-            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          </Group>
+
+          {/* Burger Menu */}
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         </Flex>
-        </Container>
+
+        {/* Drawer for Mobile Navigation */}
+        <Drawer
+          opened={opened}
+          onClose={close}
+          size="xs"
+          padding="md"
+          title="Navigation"
+        >
+          {items}
+        </Drawer>
+      </Container>
     </header>
   );
 }
