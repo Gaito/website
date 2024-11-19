@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer style={{ padding: '1rem 0', textAlign: 'center', display: 'flex' }}>
       <Container size="md">
-        <Text weight={500} size="lg" mb="xs">
-          Connect with me
+        <Text weight={500} size="xs" mb="xs">
+          Connect: <b>gaitotaylor@gmail.com</b>
         </Text>
         <Group position="center" spacing="lg" style={{justifyContent: 'space-evenly'}}>
           <Anchor href="https://www.linkedin.com/in/taylor-gaito" target="_blank">

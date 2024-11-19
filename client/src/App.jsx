@@ -9,12 +9,7 @@ import {Writings} from './screens/Writings';
 import {Piece} from './screens/Piece';
 
 export default function App() {
-  return <MantineProvider
-    theme={{
-      fontFamily: 'Segoe UI', 
-      headings: { fontFamily: 'Segoe UI' }, 
-    }}
-  >
+  return <MantineProvider>
     <Router>
       <Routes>
         <Route path="/" element={<About />} />

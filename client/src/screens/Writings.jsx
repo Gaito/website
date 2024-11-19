@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, TextInput, List, Button, Text, Flex, ColorPicker } from '@mantine/core';
+import { Container, TextInput, List, Button, Text, Flex, ScrollArea } from '@mantine/core';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -33,9 +33,10 @@ export function Writings() {
   };
 
   return (
-    <Container>
+    <ScrollArea style={{ height: '100vh' }}>
+      <Container size="md" style={{ padding: '2rem' }}>
         <Header />
-        <Text>
+        <Text style={{fontWeight: 600, paddingBottom: '.5rem'}}>
             Writings
         </Text>
 
@@ -50,8 +51,10 @@ export function Writings() {
         {writings.map((writing) => (
             <Text
                 key={writing.id}
-                style={{
-                cursor: 'pointer'}}
+                style={{ 
+                    fontStyle: 'italic',
+                    padding: '1vh', 
+                    cursor: 'pointer'}}
                 c={hoveredId === writing.id ? 'blue' : 'black'} 
                 onMouseEnter={() => setHoveredId(writing.id)} 
                 onMouseLeave={() => setHoveredId(null)} 
@@ -63,6 +66,7 @@ export function Writings() {
         </List>
         <Footer />
     </Container>
+    </ScrollArea>
 );
 }
 
