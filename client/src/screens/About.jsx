@@ -68,7 +68,7 @@ export function About() {
               visibleFrom='sm'
             />
             <Text style={{ flex: 1, textAlign: 'justify' }}>
-              Need movies? Try Portrait of a Lady on Fire, Before Sunrise, Garden State, or Rushmore. Need books? Try Portrait of the Artists as a 
+              Need movies? Try Portrait of a Lady on Fire, Before Sunrise, Garden State, or Rushmore. Need books? Try Portrait of the Artist as a 
               Young Man, Anna Karenina, As I Lay Dying, or Zen and the Art of Motorcycle Maintenance. I sometimes write poetry or little short blurbs on topics. Increasingly I'm fascinated by 
               politics/finance/other-adult-topics-that-I-never-really-understood-until-I-started-paying-taxes. I'll begin posting
               these under the writings tab on this page. Also, if you want to see my resume and past projects that's under the projects tab.
