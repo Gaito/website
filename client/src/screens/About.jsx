@@ -45,8 +45,7 @@ export function About() {
               New York is my favorite place because you can feel passion pulsing from everywhere. I'm constantly inspired being here. In my free time
               I love to write and learn songs on the guitar (I have a Mexican Fender Stratocaster with Sunburst Finish).
               I play alone now, but I was in a band throughout high school and college and have yet to make one in New York, which is not the most
-              drum-set friendly city. My first job was at a movie theatre, so here are some of my recommendations: Portrait of a Lady on Fire, 
-              Before Sunrise, Garden State, Rushmore.
+              drum-set friendly city. 
             </Text>
             <Image
               src={rightHoverImage}
@@ -69,8 +68,8 @@ export function About() {
               visibleFrom='sm'
             />
             <Text style={{ flex: 1, textAlign: 'justify' }}>
-               My favorite books include Portrait of the Artists as a 
-              Young Man, Anna Karenina, and As I Lay Dying. I sometimes write poetry or little short blurbs on topics. Increasingly I'm fascinated by 
+              Need movies? Try Portrait of a Lady on Fire, Before Sunrise, Garden State, or Rushmore. Need books? Try Portrait of the Artists as a 
+              Young Man, Anna Karenina, As I Lay Dying, or Zen and the Art of Motorcycle Maintenance. I sometimes write poetry or little short blurbs on topics. Increasingly I'm fascinated by 
               politics/finance/other-adult-topics-that-I-never-really-understood-until-I-started-paying-taxes. I'll begin posting
               these under the writings tab on this page. Also, if you want to see my resume and past projects that's under the projects tab.
             </Text>
